@@ -1,0 +1,344 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Button CSS */
+.btn {
+	background-color: #005b96;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+/* Carousel CSS */
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+	width: 70%;
+	margin: auto;
+}
+
+/* start of footer CSS */
+.footer {
+	background-color:#03396c; 
+	color:white; 
+	position:fixed; 
+	left:0;
+	right:0;
+	text-align:right; 
+	width:100%;
+}
+/* end of footer CSS */
+
+/* Clear floats after the columns */
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    position: relative;
+}
+
+
+.column column-2{
+    float: right;
+    width: 33.33%;
+    padding: 5px;
+    position: relative;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Start of Image Overlay CSS */
+.index-img {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+    width: 150px;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: blue;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.icon {
+    color: white;
+    font-size: 92px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 50%;
+    width: 150px;
+} 
+
+.fa-user:hover {
+    color: #eee;
+}
+/* End of Image Overlay CSS */
+
+    /* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+    .dl-horizontal dt {
+        white-space: normal;
+    }
+
+    /* Set width on the form input elements since they're 100% wide by default */
+    input,
+    select,
+    textarea {
+        max-width: 280px;
+    }
+
+    /* Start of Social Media Group Selection */
+    .group-selection {
+        column-count: 3;
+        column-gap: 40px;
+        column-rule-width: 1px;
+    }
+
+    .fx-column {
+        display: inline-block; /* This keeps the content from breaking between columns */
+    }
+
+    img {
+        border-radius: 50%;
+        width: 150px;
+    }
+    /* End of Social Media Group Selection */
+
+
+    /* Start of Post CSS */
+    .post > h2, .post > div {
+        background: #EEE;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .post > h2 {
+        margin-top: 15px;
+    }
+
+    /* End of Post CSS */
+
+    .sideBar {
+        background: #EEE;
+        padding: 10px;
+        margin: 0;
+        float: right;
+    }
+
+    /* Start of User Profile Page CSS */
+    #profile-shared-view {
+        display: inline-block;
+        margin: auto 0px;
+        width: 1140px;
+        height: 450px;
+        color: red;
+    }
+
+    #profile-photo {
+        position: absolute;
+        top: 230px;
+        margin-left: 70px;
+        height: 270px;
+        width: 270px;
+        border: solid;
+        border-color: white;
+        border-radius: 5px;
+        background-color: #dcdcdc;
+        z-index: 3;
+        overflow: hidden;
+    }
+
+        #profile-photo:hover #upload-picture-profile > div {
+            opacity: 1;
+        }
+
+    #upload-picture-profile {
+        margin-left: 165px;
+        color: white;
+        font-weight: 400;
+    }
+
+        #upload-picture-profile input {
+            width: 93px;
+            opacity: 0;
+        }
+
+        #upload-picture-profile div {
+            position: absolute;
+            opacity: 0;
+        }
+
+        #upload-picture-profile:hover {
+            font-style: italic;
+            font-weight: 400;
+            color: #888;
+        }
+
+        #upload-picture-profile:active {
+            font-style: italic;
+            color: black;
+        }
+
+    .image {
+        position: absolute;
+    }
+
+    .landscape {
+        height: inherit;
+        width: auto;
+        align-content: center;
+    }
+
+    .portrait {
+        width: inherit;
+        height: auto;
+    }
+
+    .landscape-cover {
+        width: inherit;
+        height: auto;
+    }
+
+    #menu {
+        background-color: black;
+        height: 80px;
+        margin-top: 300px;
+        opacity: 0.89;
+    }
+
+        #menu > div {
+            margin-left: 30%;
+            height: inherit;
+        }
+
+    a.profile-menu-buttons:link, a.profile-menu-buttons:visited {
+        display: inline-block;
+        text-decoration: none;
+        text-shadow: inherit;
+        font-size: 20px;
+        height: inherit;
+        width: auto;
+        padding-top: 22px;
+        padding-left: 50px;
+        padding-right: 50px;
+        color: #808080
+    }
+
+    a.profile-menu-buttons:hover, a.profile-menu-buttons:active {
+        color: white;
+    }
+
+    .profile-content {
+        margin-top: 60px;
+        padding-left: 0;
+    }
+
+    .profile-content-cells {
+        display: inline-block;
+        height: 372px;
+        width: 370px;
+        margin: 3px;
+    }
+
+        .profile-content-cells img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .profile-content-cells a {
+            width: inherit;
+            height: inherit;
+        }
+
+    .post-preview {
+        width: inherit;
+        height: inherit;
+        overflow: hidden;
+    }
+
+    .post-preview-background {
+        position: absolute;
+        background-color: black;
+        height: inherit;
+        width: inherit;
+        opacity: 0;
+    }
+
+    .post-preview:hover .post-preview-background {
+        opacity: 0.7;
+    }
+
+    .post-preview:hover .post-preview-text {
+        opacity: 0.84;
+    }
+
+    .post-preview-text {
+        position: absolute;
+        opacity: 0;
+        margin-top: 150px;
+        font-size: 40px;
+        font-weight: 900;
+        width: 370px;
+        text-align: center;
+        color: #888;
+        background-color: black;
+    }
+
+    .btn-primary1 {
+        color: #ffffff;
+        background-color: #222222;
+        border-color: #080808;
+    }
+
+    .topFiveCommented {
+        margin-top: 30px;
+        background: #EEE;
+        padding: 10px;
+        margin: 0;
+        float: right;
+    }
+    /* End of User Profile Page CSS */

@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "NewsFeed";
+    Layout = "~/Views/Shared/_SocialMediaLayout.cshtml";
+}
+
+<h1>NewsFeed - Please select which group you would like to start posting in?</h1>
+
+<div class="group-selection fx-column">
+    <div class="img-group">
+        <h2>Software Group</h2>
+        <img src="~/Images/software-code.jpg" alt="an image of software code" />
+        <div class="body-group">
+            <button class="btn" type="button" onclick="location.href='@Url.Action("Software", "Feed")'">Click here to view group</button>
+        </div>
+    </div>
+
+    <div class="img-group">
+        <h2>Gaming Group</h2>
+        <img src="~/Images/game-controller.png" alt="an image of a gaming controller" />
+        <div class="body-group">
+            <button class="btn" type="button" onclick="location.href='@Url.Action("Gaming", "Feed")'">Click here to view group</button>
+        </div>
+    </div>
+
+    <div class="img-group">
+        <h2>Book Group</h2>
+        <img src="~/Images/Bookshelve.jpg" alt="an image of a bookshelve" />
+        <div class="body-group">
+            <button class="btn" type="button" onclick="location.href='@Url.Action("Books", "Feed")'">Click here to view group</button>
+        </div>
+    </div>
+</div>

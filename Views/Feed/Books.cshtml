@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "GIFS";
+    Layout = "~/Views/Shared/_SocialMediaLayout.cshtml";
+}
+
+@model List<StudentBookApp.Models.Post>
+<section class="row">
+    @{
+        int counter = 0;
+
+        foreach (var post in ViewBag.TaggedPosts)
+        {
+
+            <div class="row">
+                <div class="post col-md-6">
+                    <a href="../Posts/Details/@post.Id">
+                        <h2>
+                            @Html.Raw(post.Title)
+                        </h2>
+                    </a>
+                    <div>
+                        Posted on <i>@post.Date.ToString("dd.MM.yyyy")</i>
+                        @if (post.Author != null)
+                        {
+                            @:by <i>@post.Author.FullName <strong>(@post.Author.UserName)</strong></i>
+                        }
+                        else
+                        {
+                            @:by Anonymous
+                        }
+                    </div>
+                    <div class="body">
+                        @{
+                            if (ViewBag.PostExists[counter])
+                            {
+                                if (ViewBag.IsYoutubeVideo[counter])
+                                {
+                                    <a href="../Posts/Details/@post.Id">
+                                        <img src="https://az853139.vo.msecnd.net/static/images/not-found.png" alt="Sample Image" width="100%" />
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="../Posts/Details/@post.Id">
+                                        <img src="@post.Body" alt="Sample Image" width="100%" />
+                                    </a>
+
+                                }
+
+                            }
+                            else
+                            {
+                                <a href="../Posts/Details/@post.Id">
+                                    <img src="https://az853139.vo.msecnd.net/static/images/not-found.png" alt="Sample Image" width="100%" />
+                                </a>
+                            }
+                        }
+                    </div>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <div id="number-of-likes"> @post.Likes</div>
+                        <div>
+                            @using (Html.BeginForm("LikePost", "Posts", FormMethod.Post, new { }))
+                            {
+                                <input type="hidden" name="postid" value="@post.Id">
+                                <button class="btn btn-default like" name="data" type="submit" onchange="this.form.submit()">❤</button>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div id="likes">Likes: @post.Likes</div>
+                    }
+                    <div>
+                        <a href="../Comment/Create/@post.Id" class="btn btn-default">Add new comment</a>
+                    </div>
+                    <hr />
+                </div>
+            </div>
+            counter++;
+        }
+    }
+</section>
+
+
